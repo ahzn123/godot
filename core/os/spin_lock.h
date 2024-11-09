@@ -38,8 +38,8 @@
 #include <os/lock.h>
 
 #if defined(__aarch64__) && defined(MACOS_ENABLED)
-#define OS_UNFAIR_LOCK_DATA_SYNCHRONIZATION (0x00010000)
-#define OS_UNFAIR_LOCK_ADAPTIVE_SPIN (0x00040000)
+static constexpr uint32_t OS_UNFAIR_LOCK_DATA_SYNCHRONIZATION = 0x00010000;
+static constexpr uint32_t OS_UNFAIR_LOCK_ADAPTIVE_SPIN = 0x00040000;
 
 extern "C" {
 typedef uint32_t os_unfair_lock_options_t;
